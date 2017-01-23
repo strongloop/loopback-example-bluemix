@@ -33,6 +33,11 @@
     "public": false
   },
   "Note": {
-    "dataSource": "cloudantNoSQLDB"
+    "dataSource": "cloudantNoSQLDB",
+    "options": {
+      "cloudant": {
+        "database": "demo"
+      }
+    }
   }
 }
