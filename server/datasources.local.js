@@ -1,3 +1,4 @@
+'use strict';
 var _ = require('lodash');
 // Check attached CloudFoundary services
 var services = process.env.VCAP_SERVICES;
