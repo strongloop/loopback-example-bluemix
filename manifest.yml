@@ -6,4 +6,6 @@ applications:
   name: loopback-example-bluemix
   host: loopback-example-bluemix
   disk_quota: 1024M
+env:
+  NODE_ENV: bluemix
 
