@@ -2,6 +2,8 @@
 
 This is a sample application to demonstrate LoopBack integration with Bluemix as part of Cloud Native Developer Experience initiative.
 
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/strongloop/loopback-example-bluemix)
+
 # Integration points
 
 ## Data Sources from Bluemix services
@@ -34,7 +36,7 @@ This is a sample application to demonstrate LoopBack integration with Bluemix as
 
 ## Generate manifest files for Bluemix
 
-For example, manifest.yml:
+- [manifest.yml](https://console.ng.bluemix.net/docs/manageapps/depapps.html#appmanifest):
 ```yaml
 applications:
 - path: .
@@ -45,9 +47,15 @@ applications:
   host: loopback-example-bluemix
   disk_quota: 1024M
 ```
+
+- .bluemix/pipeline.yaml
+
+
 ## Provision Bluemix services
 ## Publish to Bluemix
 
 # References
 
+- https://console.ng.bluemix.net/docs/manageapps/mngapps.html#manageapps
 - https://github.com/ibm-bluemix-mobile-services/bluemix-generator
+- https://github.com/Puquios/hello-containers

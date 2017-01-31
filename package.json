@@ -26,9 +26,9 @@
     "nsp": "^2.1.0"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/strongloop/loopback-example-bluemix"
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "description": "loopback-example-bluemix"
 }
