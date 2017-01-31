@@ -54,8 +54,23 @@ applications:
 ## Provision Bluemix services
 ## Publish to Bluemix
 
+- cf push
+- delivery pipeline (triggered by git push)
+- deploy to bluemix button
+
+## Run as a container
+
+```bash
+cf install-plugin https://static-ice.ng.bluemix.net/ibm-containers-mac
+cf ic init
+cf ic namespace get
+cf ic build -t registry.ng.bluemix.net/rfeng .
+cf ic images
+```
+
 # References
 
 - https://console.ng.bluemix.net/docs/manageapps/mngapps.html#manageapps
 - https://github.com/ibm-bluemix-mobile-services/bluemix-generator
+- https://console.ng.bluemix.net/docs/containers/container_cfapp_tutorial_intro.html
 - https://github.com/Puquios/hello-containers
