@@ -14,10 +14,10 @@ stages:
     type: builder
     extension_id: ibm.devops.services.pipeline.container.builder
     target:
-      url: https://api.ng.bluemix.net
-      organization: rfeng@us.ibm.com
-      space: dev
-    IMAGE_NAME: loopback-example-bluemix
+        url: ${CF_TARGET_URL}
+        organization: ${CF_ORGANIZATION}
+        space: ${CF_SPACE}
+        IMAGE_NAME: ${CF_APP}
     USE_CACHED_LAYERS: 'true'
     COMMAND: "#!/bin/bash\n# The following colors have been defined to help with presentation\
       \ of logs: green, red, label_color, no_color.  \nlog_and_echo \"$LABEL\" \"\
@@ -63,9 +63,9 @@ stages:
     type: deployer
     target:
       region_id: ibm:yp:us-south
-      organization: rfeng@us.ibm.com
-      space: dev
-      application: loopback-example-bluemix
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
+      application: ${CF_APP}
     script: |
       #!/bin/bash
       cf push "${CF_APP}"
@@ -73,12 +73,12 @@ stages:
     type: deployer
     extension_id: ibm.devops.services.pipeline.docker.deploy.ice
     target:
-      url: https://api.ng.bluemix.net
-      organization: rfeng@us.ibm.com
-      space: dev
+      url: ${CF_TARGET_URL}
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
     PORT: '3000'
     DEPLOY_TYPE: red_black
-    CONTAINER_NAME: loopback-example-bluemix
+    CONTAINER_NAME: ${CF_APP}
     COMMAND: "#!/bin/bash\n# The following are some example deployment scripts.  Use\
       \ these as is or fork them and include your updates here:\necho -e \"${label_color}Starting\
       \ deployment script${no_color}\"\n\n\n# To view/fork this script goto: https://github.com/Osthanes/deployscripts\n\
