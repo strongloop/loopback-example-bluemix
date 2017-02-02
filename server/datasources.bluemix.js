@@ -14,13 +14,25 @@ for (var s in services) {
   for (var i = 0, n = serviceList.length; i < n; i++) {
     var service = serviceList[i];
     // We need a better way to filter services of interest
-    if (s.indexOf('postgresql') !== -1) {
+    if (s === 'compose-for-mongodb') {
+      dataSources[s] = _.cloneDeep(service.credentials);
+      // We need a better way to map service configuration to data source
+      dataSources[s].url = dataSources[s].uri;
+      dataSources[s].connector = 'mongodb';
+    }
+    if (s === 'compose-for-mysql') {
+      dataSources[s] = _.cloneDeep(service.credentials);
+      // We need a better way to map service configuration to data source
+      dataSources[s].url = dataSources[s].uri;
+      dataSources[s].connector = 'mysql';
+    }
+    if (s === 'compose-for-postgresql') {
       dataSources[s] = _.cloneDeep(service.credentials);
       // We need a better way to map service configuration to data source
       dataSources[s].url = dataSources[s].uri;
       dataSources[s].connector = 'postgresql';
     }
-    if (s.indexOf('cloudant') !== -1) {
+    if (s === 'cloudantNoSQLDB') {
       dataSources[s] = _.cloneDeep(service.credentials);
       dataSources[s].database = 'loopback';
       dataSources[s].connector = 'cloudant';
