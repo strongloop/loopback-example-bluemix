@@ -1,3 +1,7 @@
+declared-services:
+  cloudant-db:
+    label: cloudantNoSQLDB
+    plan: Lite
 applications:
 - path: .
   memory: 512M
@@ -6,6 +10,8 @@ applications:
   name: loopback-example-bluemix
   host: loopback-example-bluemix
   disk_quota: 1024M
+  services:
+  - cloudant-db
 env:
   NODE_ENV: bluemix
 

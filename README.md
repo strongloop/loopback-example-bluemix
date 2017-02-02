@@ -74,3 +74,4 @@ cf ic images
 - https://github.com/ibm-bluemix-mobile-services/bluemix-generator
 - https://console.ng.bluemix.net/docs/containers/container_cfapp_tutorial_intro.html
 - https://github.com/Puquios/hello-containers
+- https://github.com/IBM-Bluemix/bluechatter
