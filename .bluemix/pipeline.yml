@@ -17,7 +17,7 @@ stages:
         url: ${CF_TARGET_URL}
         organization: ${CF_ORGANIZATION}
         space: ${CF_SPACE}
-        IMAGE_NAME: ${CF_APP}
+    IMAGE_NAME: ${CF_APP}
     USE_CACHED_LAYERS: 'true'
     COMMAND: |
       #!/bin/bash
