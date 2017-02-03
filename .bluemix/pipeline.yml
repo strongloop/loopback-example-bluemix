@@ -75,7 +75,7 @@ stages:
       # Copy any artifacts that will be needed for deployment and testing to $WORKSPACE    #
       ######################################################################################
       echo "IMAGE_NAME=${FULL_REPOSITORY_NAME}" >> $ARCHIVE_DIR/build.properties
-- name: Deploy Stage
+- name: Deploy CloudFoundry
   inputs:
   - type: job
     stage: Build Stage
@@ -83,7 +83,7 @@ stages:
   triggers:
   - type: stage
   jobs:
-  - name: Deploy
+  - name: Deploy CF App
     type: deployer
     target:
       region_id: ${BLUEMIX_REGION_ID}
@@ -93,7 +93,15 @@ stages:
     script: |
       #!/bin/bash
       cf push "${CF_APP}"
-  - name: Deploy Container
+- name: Deploy Container
+  inputs:
+  - type: job
+    stage: Build Stage
+    job: Build Container
+  triggers:
+  - type: stage
+  jobs:
+  - name: Deploy IBM Container
     type: deployer
     extension_id: ibm.devops.services.pipeline.docker.deploy.ice
     target:
