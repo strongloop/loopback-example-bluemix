@@ -10,7 +10,7 @@ stages:
   - name: Build
     type: builder
     artifact_dir: ''
-  - name: Build Container
+  - name: BuildContainer
     type: builder
     extension_id: ibm.devops.services.pipeline.container.builder
     target:
@@ -97,7 +97,7 @@ stages:
   inputs:
   - type: job
     stage: Build Stage
-    job: Build Container
+    job: BuildContainer
   triggers:
   - type: stage
   jobs:
