@@ -6,7 +6,7 @@ if (process.env.VCAP_SERVICES) {
   module.exports = {
     cloudantNoSQLDB: {
       name: 'cloudantNoSQLDB',
-      connector: 'memory'
-    }
+      connector: 'memory',
+    },
   };
 }
