@@ -5,7 +5,8 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint && nsp check"
+    "test": "tape test/*.js",
+    "posttest": "npm run lint"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -25,7 +26,8 @@
   "devDependencies": {
     "eslint": "^2.13.1",
     "eslint-config-loopback": "^4.0.0",
-    "nsp": "^2.1.0"
+    "nsp": "^2.1.0",
+    "tape": "^4.6.3"
   },
   "repository": {
     "type": "git",
