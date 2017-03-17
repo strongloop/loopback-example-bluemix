@@ -5,34 +5,27 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "test": "tape test/*.js",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "helmet": "^1.3.0",
-    "lodash": "^4.17.4",
     "loopback": "^3.0.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^4.0.0",
-    "loopback-connector-cloudant": "^1.1.0",
-    "loopback-connector-mongodb": "^3.0.0",
-    "loopback-connector-mysql": "^3.0.0",
-    "loopback-connector-postgresql": "^2.7.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^1.0.1"
   },
   "devDependencies": {
     "eslint": "^2.13.1",
     "eslint-config-loopback": "^4.0.0",
-    "nsp": "^2.1.0",
-    "tape": "^4.6.3"
+    "nsp": "^2.1.0"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/strongloop/loopback-example-bluemix"
+    "type": "",
+    "url": ""
   },
-  "license": "MIT",
+  "license": "UNLICENSED",
   "description": "loopback-example-bluemix"
 }
