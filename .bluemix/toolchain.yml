@@ -6,7 +6,7 @@ required:
  - repo
 
 toolchain:
-  name: loopback-example-bluemix
+  name: demo-apple
 
 # Github repos
 repo:
@@ -45,4 +45,4 @@ deploy:
     $ref: deploy.json
   service-category: pipeline
   parameters:
-    app-name: loopback-example-bluemix
+    app-name: demo-apple
