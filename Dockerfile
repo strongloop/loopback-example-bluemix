@@ -1,15 +1,10 @@
-FROM node:6.9
+FROM ibmcom/ibmnode
 
-# Create app directory
-RUN mkdir -p /app
-WORKDIR /app
-
-# Install app dependencies
-COPY package.json /app
-RUN npm install
-
-# Bundle app source
-COPY . /app
-
-EXPOSE 3000
-CMD [ "npm", "start" ]
+  RUN mkdir -p /usr/src/app
+  WORKDIR /usr/src/app
+  ENV NODE_ENV bluemix
+  COPY package.json /usr/src/app/
+  RUN npm install
+  COPY . /usr/src/app
+  EXPOSE 3000
+  CMD ["npm", "start"]

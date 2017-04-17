@@ -26,18 +26,13 @@
   },
   "RoleMapping": {
     "dataSource": "db",
-    "public": false
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
   },
   "Role": {
     "dataSource": "db",
     "public": false
-  },
-  "Note": {
-    "dataSource": "cloudantNoSQLDB",
-    "options": {
-      "cloudant": {
-        "database": "demo"
-      }
-    }
   }
 }
