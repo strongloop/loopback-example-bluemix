@@ -6,6 +6,9 @@
     },
     "mongodb": {
       "label": "compose-for-mongodb"
+    },
+    "ibm-object-storage": {
+      "label": "Object-Storage"
     }
   }
 }
