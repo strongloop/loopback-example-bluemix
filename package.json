@@ -27,5 +27,6 @@
     "url": ""
   },
   "license": "UNLICENSED",
-  "description": "loopback-example-bluemix"
+  "description": "loopback-example-bluemix",
+  "author": "IBM Corp."
 }
